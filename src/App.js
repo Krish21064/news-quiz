@@ -2,64 +2,64 @@ import React, { useState, useEffect } from 'react';
 
 const questions = [
     {
-        question: "Which country recently launched a mission to the moon's south pole?",
-        answers: ["India", "USA", "China", "Russia"],
-        correct: 0,
-        explanation: "India launched Chandrayaan-3 to the moon's south pole in August 2023."
+        question: "What action did GSOC demand NYU take regarding international and immigrant community members?",
+        answers: ["Provide free legal assistance for student visa renewals", "Prevent governmental agencies from targeting them based on immigration status", "Offer them automatic tuition waivers", "Grant permanent residency to all international students"],
+        correct: 1,
+        explanation: "GSOC specifically called on NYU to honor a section of the union’s 2021 collective bargaining agreement detailing the university’s commitment “regarding the protection of the privacy” of all community members."
     },
     {
-        question: "What global event is causing concern about rising food prices?",
-        answers: ["War in Ukraine", "Heat wave in Antarctica", "Discovery of new insect species", "Increased tourism in Greenland"],
-        correct: 0,
-        explanation: "The war in Ukraine has disrupted global supply chains, particularly for grain."
+        question: "What is the name of the NYU student group calling for the university to cut ties with Nike?",
+        answers: ["Students Against Corporate Exploitation", "NYU Labor Rights Association", "Students for International Labor Solidarity", "NYU Sunrise"],
+        correct: 2,
+        explanation: "Members of Students for International Labor Solidarity reiterated that NYU leadership cut the university’s contract with Nike, following almost four-year-old allegations of wage theft at a Thailand factory that supplies the NYU Bookstore with Nike-branded merchandise."
     },
     {
-        question: "Which major tech company announced a new AI model in late 2023?",
-        answers: ["Google", "Apple", "Microsoft", "Amazon"],
-        correct: 0,
-        explanation: "Google unveiled Gemini, their new multimodal AI model, in December 2023."
+        question: "What did former NYU College Republicans president Kaya Walker call Barron Trump?",
+        answers: ["A future NYU Republican president", "A political anomaly", "A popular first-uear", "An oddity on campus"],
+        correct: 3,
+        explanation: "Former club president Kaya Walker told Vanity Fair that President Donald Trump’s son has been subject to excessive attention since enrolling in the university last fall."
     },
     {
-        question: "Which country is facing a severe economic crisis marked by hyperinflation?",
-        answers: ["Argentina", "Germany", "Canada", "Japan"],
-        correct: 0,
-        explanation: "Argentina is battling hyperinflation and a deep economic crisis."
+        question: "Which action group sponsored the Presidents' Day demonstration?",
+        answers: ["National Immigration Alliance", "National Association of the Latino State Chambers of Congress", "Rise and Resist", "Revolution Now"],
+        correct: 2,
+        explanation: "Sponsored by direct action group Rise and Resist, the rally was one of several held in major cities across the country titled “Not My President’s Day.” "
     },
     {
-        question: "What major sporting event was held in Australia and New Zealand in July/August 2023?",
-        answers: ["FIFA Women's World Cup", "Summer Olympics", "Super Bowl", "Tour de France"],
-        correct: 0,
-        explanation: "Australia and New Zealand co-hosted the FIFA Women's World Cup 2023."
+        question: "Why were the nurses fired at NYU Langone Hospital—Brooklyn in 2022?",
+        answers: ["They were caught stealing medications", "They failed to assist a woman who gave birth in a hallway", "They were accused of patient neglect", "They were caught falsifying patient records"],
+        correct: 1,
+        explanation: "In December 2022, administrators at NYU Langone Hospital—Brooklyn fired its entire labor and delivery staff for not intervening when a woman got lost in the building and gave birth in a walkway outside of the hospital’s labor and delivery unit."
     },
     {
-        question: "What new technology is enabling the rapid development of AI assistants?",
-        answers: ["Transformer networks", "Quantum computing", "Blockchain technology", "5G networks"],
+        question: "Where did the Stern School of Business launch its new MBA program?",
+        answers: ["NYU Abu Dhabi", "NYU Shanghai", "NYU London", "NYU Paris"],
         correct: 0,
-        explanation: "Transformer networks have revolutionized NLP and enabled more sophisticated AI assistants."
+        explanation: "This collaboration between the Abu Dhabi campus and offers a one-year MBA program with an inaugural cohort of 54 students. "
     },
     {
-        question: "Which European country is considering a ban on facial recognition technology?",
-        answers: ["France", "Italy", "Germany", "UK"],
-        correct: 0,
-        explanation: "Germany is debating a potential ban on facial recognition tech in public spaces."
+        question: "What did NYU spokesperson John Beckman state regarding the university’s stance on changes in federal policies regarding DEI?",
+        answers: ["NYU would not comply with federal laws", " NYU would continue offering counseling services and support groups", "NYU plans to end all DEI initiatives", "NYU would relocate to another country"],
+        correct: 1,
+        explanation: "In a Feb. 2 statement to WSN, NYU spokesperson John Beckman said the university is “closely monitoring emerging federal policies on all matters related to higher education” and will continue to offer counseling services, support groups and listening sessions to community members."
     },
     {
-        question: "Which city hosted the climate change conference in late 2023?",
-        answers: ["Dubai", "Paris", "New York", "Tokyo"],
-        correct: 0,
-        explanation: "Dubai hosted the COP28 climate change conference in late 2023."
+        question: "What was on the CIA’s reserved table at the start of internship fair?",
+        answers: ["A petition for students to sign in favor of the CIA’s work", "A video of CIA operations", "Nothing", "A QR code for students to send their Handshake profiles"],
+        correct: 3,
+        explanation: "Organizers cleared the table within the first hour of the event, which was set to last until 3 p.m.."
     },
     {
-        question: "Which African nation has seen increased political instability recently?",
-        answers: ["Niger", "South Africa", "Nigeria", "Kenya"],
-        correct: 0,
-        explanation: "Niger has experienced a recent coup, contributing to political instability."
+        question: "Which NYU school runs science and tech summer programs for K-12 students?",
+        answers: ["College of Arts & Science", "Courant Institute of Mathematical Sciences", "Tandon School of Engineering", "School of Professional Studies"],
+        correct: 2,
+        explanation: "Run by the Tandon School of Engineering’s Center for K12 STEM Education, the programs received just over 2,800 applications in 2023 — jumping to around 4,800 in 2024."
     },
     {
-        question: "What is the name of the new weight loss drug that gained popularity recently?",
-        answers: ["Ozempic", "Metformin", "Insulin", "Synthroid"],
-        correct: 0,
-        explanation: "Ozempic, originally for diabetes, has gained popularity as a weight loss drug."
+        question: "What is the main reason Kenyon Chapman, a forming housing manager, is suing NYU?",
+        answers: ["Violation of labor rights", "Religious discrimination regarding the university’s COVID-19 vaccine mandate", "Unfair dismissal after a family emergency", "For discrimination based on sexual orientation"],
+        correct: 1,
+        explanation: " In a lawsuit filed on Jan. 22, Chapman claimed that his termination violated civil rights laws and was “done with malice.” The suit is scheduled to go to court in April."
     }
 ];
 
@@ -121,8 +121,8 @@ const Quiz = () => {
             <div className="quiz-container">
                 {!isStarted ? (
                     <div className="screen start-screen">
-                        <h1 className="quiz-title">News Quiz</h1>
-                        <p className="quiz-description">Test your knowledge of current events</p>
+                        <h1 className="quiz-title">WSN Monthly News Quiz</h1>
+                        <p className="quiz-description">February 2025</p>
                         <button className="main-button start-button" onClick={() => setIsStarted(true)}>
                             Start Quiz
                         </button>
@@ -203,8 +203,8 @@ const Quiz = () => {
 
             <style jsx>{`
                 :root {
-                    --primary-color: #2980b9;
-                    --secondary-color: #3498db;
+                    --primary-color: #ED1C24;
+                    --secondary-color: #ED1C24;
                     --text-color: #fff;
                     --bg-color: #1a1a1a;
                     --spacing-small: min(2vh, 20px);
